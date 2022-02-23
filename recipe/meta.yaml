@@ -29,6 +29,7 @@ requirements:
     - napari-plugin-engine >=0.1.4
     - numpy
     - pandas
+    - platformdirs
     - python >=3.7
     - scikit-image
     - pytables
