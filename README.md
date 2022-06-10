@@ -120,4 +120,4 @@ Feedstock Maintainers
 
 * [@adamltyson](https://github.com/adamltyson/)
 * [@goanpeca](https://github.com/goanpeca/)
-
+* [@jaimergp](https://github.com/jaimergp/)
