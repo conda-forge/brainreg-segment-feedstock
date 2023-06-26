@@ -1,5 +1,5 @@
 {% set name = "brainreg-segment" %}
-{% set version = "0.2.16" %}
+{% set version = "0.2.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/brainreg-segment-{{ version }}.tar.gz
-  sha256: eb1a82840e3c17770ee648b90a29213022816140df2d4923f0c30b266360982e
+  sha256: 8a985ec2872cc74efd9c4fc5b774db84ba0031c59d07c6d801596719ab252ad4
 
 build:
   entry_points:
