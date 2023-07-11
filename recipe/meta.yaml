@@ -24,7 +24,7 @@ requirements:
     - brainglobe-napari-io
     - dask-core >=2.15.0
     - imio
-    - imlib >=0.0.26
+    - brainglobe-utils
     - napari >=0.4.5
     - napari-plugin-engine >=0.1.4
     - numpy
