@@ -23,6 +23,7 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
+    - bg-atlasapi  # Imported in source but not declared as requirement
     - brainglobe-napari-io >=0.3.0
     - brainglobe-utils >=0.2.7
     - dask-core >=2.15.0
