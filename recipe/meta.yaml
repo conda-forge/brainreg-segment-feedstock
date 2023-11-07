@@ -19,19 +19,19 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8,<3.11
     - setuptools
-    - setuptools_scm
+    - setuptools-scm
   run:
-    - brainglobe-napari-io
+    - brainglobe-napari-io >=0.3.0
     - dask-core >=2.15.0
     - imio
-    - brainglobe-utils
+    - brainglobe-utils >=0.2.7
     - napari >=0.4.5
     - napari-plugin-engine >=0.1.4
     - numpy
     - pandas
-    - python >=3.7
+    - python >=3.8,<3.11
     - scikit-image
     - pytables
 
