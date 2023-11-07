@@ -24,16 +24,19 @@ requirements:
     - setuptools-scm
   run:
     - brainglobe-napari-io >=0.3.0
+    - brainglobe-utils >=0.2.7
     - dask-core >=2.15.0
     - imio
-    - brainglobe-utils >=0.2.7
     - napari >=0.4.5
     - napari-plugin-engine >=0.1.4
     - numpy
     - pandas
     - python >=3.8,<3.11
-    - scikit-image
     - pytables
+    - qtpy  # Imported in source but not declared as requirement
+    - scikit-image
+    - scipy  # Imported in source but not declared as requirement
+    - tifffile  # Imported in source but not declared as requirement
 
 test:
   imports:
