@@ -1,5 +1,5 @@
 {% set name = "brainreg-segment" %}
-{% set version = "0.2.18" %}
+{% set version = "0.2.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,33 +7,37 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/brainreg-segment-{{ version }}.tar.gz
-  sha256: 60ac1686920438466eec2df86c048a01ad75c47e131a1d601c16f01ea915a9a6
+  sha256: 0e641ae937a37bd8674290cd5bddfa87599b71a827ff882ca3e81fdf56c6f454
 
 build:
   entry_points:
     - brainreg-segment = brainreg_segment.segment:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8,<3.11
     - setuptools
-    - setuptools_scm
+    - setuptools-scm
   run:
-    - brainglobe-napari-io
+    - bg-atlasapi  # Imported in source but not declared as requirement
+    - brainglobe-napari-io >=0.3.0
+    - brainglobe-utils >=0.2.7
     - dask-core >=2.15.0
     - imio
-    - brainglobe-utils
     - napari >=0.4.5
     - napari-plugin-engine >=0.1.4
     - numpy
     - pandas
-    - python >=3.7
-    - scikit-image
+    - python >=3.8,<3.11
     - pytables
+    - qtpy  # Imported in source but not declared as requirement
+    - scikit-image
+    - scipy  # Imported in source but not declared as requirement
+    - tifffile  # Imported in source but not declared as requirement
 
 test:
   imports:
