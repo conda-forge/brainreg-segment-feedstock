@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/brainreg-segment-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/brainreg-segment-{{ version }}.tar.gz
   sha256: 71b25393d77b1d99e0456793b436d8bc4c28645511e8f8903535da1dc331315e
 
 build:
@@ -14,12 +14,12 @@ build:
     - brainreg-segment = brainreg_segment.segment:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8,<3.11
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
@@ -32,7 +32,7 @@ requirements:
     - napari-plugin-engine >=0.1.4
     - numpy
     - pandas
-    - python >=3.8,<3.11
+    - python >={{ python_min }},<3.11
     - pytables
     - qtpy  # Imported in source but not declared as requirement
     - scikit-image
@@ -47,6 +47,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://brainglobe.info/
